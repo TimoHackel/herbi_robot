@@ -1,0 +1,7 @@
+threshold: 0.075
+maxIterations: 1000
+minProb: 1.0
+minModelWeight: 20.
+doLeastSquare: true
+leastSquareIterations: 0
+leastSquareMinPoints: 35

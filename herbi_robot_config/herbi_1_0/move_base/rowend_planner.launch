@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+        <node pkg="herbi_move_base" type="rowend_planner_node" name="rowend_planner_node" ns="move_base" respawn="false" output="screen">
+
+        </node>
+</launch>
+

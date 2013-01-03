@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+        <param name="ransac/points_file" value="$(find herbi_geometry)/matlab/points.txt"/>
+        <param name="ransac/rate" value="1."/>
+        <node pkg="herbi_geometry" type="test_node" name="test_node" ns="ransac" respawn="false" output="screen">
+		<remap from="ransac_input" to="/cloud_filtered"/>
+        </node>
+</launch>
+

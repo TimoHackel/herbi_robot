@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="arg_robot" default="herbi_1_0"/>
+        <include file="$(find herbi_robot_config)/$(arg arg_robot)/rowestimation/cloudfilter.launch" />
+        <include file="$(find herbi_robot_config)/$(arg arg_robot)/rowestimation/laserscan2pointcloud.launch" />
+        <include file="$(find herbi_robot_config)/$(arg arg_robot)/rowestimation/ransac_gridline.launch" />
+        <include file="$(find herbi_robot_config)/$(arg arg_robot)/rowestimation/display_gl.launch" />
+
+
+</launch>
+

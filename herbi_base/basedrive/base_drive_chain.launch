@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="sim" default="false"/>
+
+	<rosparam command="load" ns="herbi_bot" file="$(find herbi_base)/basedrive/$(env ROBOT).yaml"/>
+
+  	<!-- start base_drive_chain and locate IniFiles -->
+	<group if="$(arg sim)">
+		<node pkg="cob_base_drive_chain" type="cob_base_drive_chain_sim_node" ns="herbi_bot" name="base_drive_can_node" respawn="false" output="screen" ><!--launch-prefix="xterm -e gdb args"-->
+			<remap from="joint_states" to="/joint_states"/>
+			<remap from="cmd_joint_traj" to="/cmd_joint_traj"/>
+		</node>
+	</group>
+	<group unless="$(arg sim)">
+		<node pkg="cob_base_drive_chain" type="cob_base_drive_chain_node" ns="herbi_bot" name="base_drive_can_node" respawn="false" output="screen" ><!--launch-prefix="xterm -e gdb args"-->
+			<remap from="joint_states" to="/joint_states"/>
+			<remap from="cmd_joint_traj" to="/cmd_joint_traj"/>
+		</node>
+	</group>
+</launch>	

@@ -1,0 +1,7 @@
+threshold: 0.04
+thresholdneg: 0.09
+maxIterations: 200
+minProb: 0.999
+doLeastSquare: true
+leastSquareIterations: 3
+goodModelWeight: 2.

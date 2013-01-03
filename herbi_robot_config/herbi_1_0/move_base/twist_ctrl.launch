@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+        <rosparam command="load" ns="move_base" file="$(find herbi_robot_config)/herbi_1_0/move_base/twist_ctrl.yaml"/>
+        <node pkg="herbi_move_base" type="twist_ctrl_node" name="twist_ctrl_node" ns="move_base" respawn="false" output="screen">
+                <remap from="cmd_vel" to="/cmd_vel" />
+
+        </node>
+</launch>
+

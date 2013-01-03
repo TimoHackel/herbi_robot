@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+        <rosparam command="load" ns="ransac" file="$(find herbi_robot_config)/herbi_1_0/rowestimation/ransac_gridline.yaml"/>
+        <node pkg="herbi_geometry" type="ransac_gridline_node" name="ransac_gridline_node" ns="ransac" respawn="false" output="screen">
+		<remap from="ransac_input" to="/cloud_filtered"/>
+        </node>
+</launch>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+        <node pkg="herbi_move_base" type="inrow_planner_node" name="inrow_planner_node" ns="move_base" respawn="false" output="screen">
+                <remap from="row" to="/ransac/ransac_best_model" />
+
+        </node>
+</launch>
+

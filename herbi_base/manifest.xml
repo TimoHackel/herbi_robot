@@ -1,0 +1,14 @@
+<package>
+  <description brief="herbi_base">
+
+     herbi_base
+
+  </description>
+  <author>pcb</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/herbi_base</url>
+
+</package>
+
+

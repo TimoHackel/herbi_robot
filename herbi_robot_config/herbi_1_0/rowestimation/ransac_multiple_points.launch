@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+        <rosparam command="load" ns="ransac" file="$(find herbi_geometry)/ros/launch/ransac_multiple_points.yaml"/>
+        <node pkg="herbi_geometry" type="ransac_multiple_points_node" name="ransac_multiple_points_node" ns="ransac" respawn="false" output="screen">
+        </node>
+</launch>
+

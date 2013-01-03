@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+        <node pkg="herbi_geometry" type="gridline_display_node" name="display_node" ns="ransac" respawn="false" output="screen">
+        </node>
+</launch>
+

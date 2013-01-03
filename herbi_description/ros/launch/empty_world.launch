@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="arg_world" default="$(find gazebo_worlds)/worlds/empty.world"/>
+    <param name="/use_sim_time" value="true" />
+
+
+    <node name="gazebo" pkg="gazebo" type="gazebo" args="$(optenv SIMX) $(arg arg_world)" respawn="false" output="screen"/>
+
+    <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/>	
+
+    
+    <include file="$(find herbi_description)/ros/launch/mobile_base.launch" />
+
+</launch>

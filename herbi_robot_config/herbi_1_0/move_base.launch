@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<!--arguments-->
+	<arg name="arg_robot" default="herbi_1_0"/>
+
+	<!-- launch the gazebo simulation of the robot -->
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/move_base/inrow_planner.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/move_base/rowend_planner.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/move_base/rowend_estimator.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/move_base/inrow_estimator.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/move_base/rowplanner_state_machine.launch"/>
+</launch>
+

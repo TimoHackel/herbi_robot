@@ -1,0 +1,6 @@
+threshold: 0.2
+maxIterations: 2000
+minProb: 0.999
+doLeastSquare: true
+leastSquareIterations: 3
+
