@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+        <node pkg="herbi_smach_fre13" type="basic.py" name="state_machine" ns="move_base" respawn="false" output="screen">
+        </node>
+</launch>
+

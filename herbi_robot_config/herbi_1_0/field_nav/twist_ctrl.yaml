@@ -1,0 +1,12 @@
+kp: 30
+kp2: 0
+kp3: 15
+vel_x: 1.5
+vel_x_min: 0.2
+angular_vel_z: 0.8
+frame_name: base_link
+drawbar1_max: 1.3
+drawbar1_min: 0.3
+drawbar2_diff: 0.6
+max_halt_angle: 25
+max_offset: 0.15

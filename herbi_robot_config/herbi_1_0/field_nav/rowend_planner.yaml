@@ -1,0 +1,7 @@
+frame_id: /map
+turn_direction: 0
+timeout: 2.
+row_dist: 0.75
+path_offset: 0.5
+turn_pattern: o1ro1r+
+

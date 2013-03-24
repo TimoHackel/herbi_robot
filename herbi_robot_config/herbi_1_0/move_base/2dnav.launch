@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- launch slam -->
+  <include file="$(find herbi_robot_config)/$(env ROBOT)/slam/slam_hector.launch"/>
+
+  <!--include file="$(find herbi_robot_config)/$(env ROBOT)/move_base/amcl.launch" /-->
+ 
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+<!--remap from="/cmd_vel" to="/cmd_vel___"/-->
+    <param name="planner_frequency" value="10"/>
+    <param name="recovery_behavior_enabled" value="true"/>
+    <param name="controller_frequency" value="10"/>
+    <param name="base_global_planner" value="herbi_planner_if/HerbiPlannerIf"/>
+    <rosparam file="$(find herbi_robot_config)/$(env ROBOT)/move_base/costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find herbi_robot_config)/$(env ROBOT)/move_base/costmap_common.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find herbi_robot_config)/$(env ROBOT)/move_base/costmap_local.yaml" command="load" />
+    <rosparam file="$(find herbi_robot_config)/$(env ROBOT)/move_base/costmap_global.yaml" command="load" />
+    <rosparam file="$(find herbi_robot_config)/$(env ROBOT)/move_base/planer_local.yaml" command="load" />
+  </node>
+
+</launch>

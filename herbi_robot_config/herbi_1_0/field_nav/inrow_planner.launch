@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+        <rosparam command="load" ns="move_base" file="$(find herbi_robot_config)/herbi_1_0/field_nav/inrow_planner.yaml"/>
+        <node pkg="herbi_field_navigation" type="inrow_planner_node" name="inrow_planner_node" ns="move_base" respawn="false" output="screen">
+                <remap from="row" to="/ransac/ransac_best_model" />
+                <remap from="global_plan" to="/move_base/HerbiPlannerIf/global_plan" />
+
+        </node>
+</launch>
+

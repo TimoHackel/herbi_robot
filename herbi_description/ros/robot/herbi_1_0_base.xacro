@@ -9,6 +9,7 @@
     <include filename="$(find herbi_description)/ros/robot/materials.urdf.xacro" />
     <include filename="$(find herbi_description)/ros/robot/air_wheel.xacro" />
     <include filename="$(find herbi_description)/ros/sensors/sick_s300_laser.urdf.xacro" />
+    <include filename="$(find herbi_description)/ros/sensors/sick_tim3xx.urdf.xacro" />
     <include filename="$(find herbi_description)/ros/sensors/kinect.urdf.xacro" />
     <include filename="$(find herbi_description)/ros/sensors/imu.urdf.xacro" />
 
@@ -202,9 +203,13 @@
         </air_wheel_150>
 
 
-	<sick_s300_laser_v0 name="base_laser" parent="base" ros_topic="scan" update_rate="50" min_angle="-2.3562" max_angle="2.3562" >
+	<!--sick_s300_laser_v0 name="base_laser" parent="base" ros_topic="scan" update_rate="50" min_angle="-2.3562" max_angle="2.3562" >
            <origin xyz="0.2775 0 0.185" rpy="0 0 0" />
-        </sick_s300_laser_v0>
+        </sick_s300_laser_v0-->
+
+	<sick_tim3xx name="base_laser" parent="base" ros_topic="scan" >
+           <origin xyz="0.255 0 0.185" rpy="3.1415926 0 0" />
+        </sick_tim3xx>
 
         <kinect name="kinect_front" parent="base" namespace="/kinect_front" >
            <origin xyz="0.2775 0 0.39" rpy="0 0 0" />

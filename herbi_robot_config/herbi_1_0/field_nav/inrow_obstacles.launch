@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+        <node pkg="herbi_field_navigation" type="inrow_obstacles_node" name="inrow_obstacles_node" ns="move_base" respawn="false" output="screen">
+                <remap from="ransac_best_model" to="/ransac/ransac_best_model" />
+                <remap from="ransac_inliers" to="/ransac/ransac_inliers" />
+                <remap from="cloud_filtered" to="/cloud_filtered" />
+        </node>
+</launch>
+

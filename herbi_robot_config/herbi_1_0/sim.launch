@@ -4,8 +4,9 @@
 	<arg name="arg_robot" default="herbi_1_0"/>
 	<arg name="arg_simulation" default="true"/>
 	<arg name="arg_sim_world" default="$(find herbi_gazebo_worlds)/ros/worlds/emptyfield.world"/>
-	<!--arg name="arg_sim_field" default="$(find herbi_gazebo_worlds)/ros/worlds/field1.urdf"/-->
-	<arg name="arg_sim_field" default="$(find herbi_gazebo_worlds)/ros/worlds/sunflower_field.urdf"/>
+	<arg name="arg_sim_field" default="$(find herbi_gazebo_worlds)/ros/worlds/field1.urdf"/>
+	<!--arg name="arg_sim_field" default="$(find herbi_gazebo_worlds)/ros/worlds/sunflower_field.urdf"/-->
+	<!--arg name="arg_sim_field" default="$(find herbi_gazebo_worlds)/ros/worlds/straight_sunflower_field.urdf"/-->
 
 	<!-- launch the gazebo simulation of the robot -->
 	<include file="$(find herbi_description)/ros/launch/field_world.launch">

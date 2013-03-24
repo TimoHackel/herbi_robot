@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<!--arguments-->
+	<arg name="arg_robot" default="herbi_1_0"/>
+
+	<!-- launch navigation -->
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/field_nav/inrow_planner.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/field_nav/inrow_obstacles.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/field_nav/rowend_planner.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/field_nav/row_state_estimator.launch"/>
+	<include file="$(find herbi_robot_config)/$(arg arg_robot)/field_nav/rowplanner_state_machine.launch"/>
+</launch>
+

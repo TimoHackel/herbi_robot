@@ -41,17 +41,17 @@ drive0:
   VelPModeEncIncrS: 10
   CurrentContLimit: 2.4
   CurrentToTorque: 0.19
-  CANId: 2
+  CANId: 4
 
 drive1:
   control_type: 2
-  joint_name: wheel_front_left_joint
+  joint_name: wheel_front_right_joint
   EncIncrPerRevMot: 8192
   VelMeasFrqHz: 1
   GearRatio: 5
   GearEfficiency: 1.
   BeltRatio: 1
-  Sign: 1.0
+  Sign: -1.0
   VelMaxEncIncrS: 300000
   AccIncrS: 500000
   DecIncrS: 500000
@@ -63,7 +63,7 @@ drive1:
 
 drive2:
   control_type: 2
-  joint_name: wheel_front_left_joint
+  joint_name: wheel_back_left_joint
   EncIncrPerRevMot: 8192
   VelMeasFrqHz: 1
   GearRatio: 5
@@ -77,17 +77,17 @@ drive2:
   VelPModeEncIncrS: 10
   CurrentContLimit: 2.4
   CurrentToTorque: 0.19
-  CANId: 4
+  CANId: 2
 
 drive3:
   control_type: 2
-  joint_name: wheel_front_left_joint
+  joint_name: wheel_back_right_joint
   EncIncrPerRevMot: 8192
   VelMeasFrqHz: 1
   GearRatio: 5
   GearEfficiency: 1.
   BeltRatio: 1
-  Sign: 1.0
+  Sign: -1.0
   VelMaxEncIncrS: 300000
   AccIncrS: 500000
   DecIncrS: 500000
