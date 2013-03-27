@@ -5,14 +5,11 @@
     <arg name="WORLD_DES" default="$(find herbi_gazebo_worlds)/ros/worlds/field1.urdf"/>
     <param name="/use_sim_time" value="true" />
 
-    <include file="$(find herbi_gazebo_worlds)/ros/launch/worlds_urdf.launch">
-	<arg name="WORLD" value="$(arg WORLD)"/>
-	<arg name="WORLD_DES" value="$(arg WORLD_DES)"/>
-    </include>
+    <node name="gazebo" pkg="gazebo" type="gazebo" args="$(arg WORLD)" respawn="false" output="screen"/>
 
     <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/>
 
-    
     <include file="$(find herbi_description)/ros/launch/mobile_base.launch" />
 
+    <node name="spawn_urdf_world" pkg="gazebo" type="spawn_model" args="-urdf -file $(arg WORLD_DES) -z 0.1 -model field_world" respawn="false" output="screen" />
 </launch>
